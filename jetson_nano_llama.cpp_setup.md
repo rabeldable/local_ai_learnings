@@ -10,7 +10,10 @@ This guide recreates your working setup exactly, on a **Jetson Nano (t210ref)** 
 - **GCC/G++**: 8.5.0 (built from source)  
 - **CUDA Arch**: **53** (Maxwell, Nano)
 
-The steps below remove dead ends and retries from your history.
+# Inspiration from Anurag Dogra
+https://medium.com/@anuragdogra2192/llama-cpp-on-nvidia-jetson-nano-a-complete-guide-fb178530bc35
+
+
 
 ---
 
@@ -143,7 +146,7 @@ cd ~/LOCAL_LLM/llama.cpp/build
 ./bin/main   -m ~/LOCAL_LLM/models/tinyllama-1.1b-chat-v1.0.Q4_0.gguf   -n 128   -p "Tell me a joke."
 
 # Option B: CodeLlama 7B instruct (heavier)
-./bin/main   -m ~/LOCAL_LLM/models/codellama-7b-instruct.Q2_K.gguf   -n 256   -p "Write a complete Python script that gets the latest Bitcoin price using the CoinGecko API. Include error handling."
+./bin/main   -m ~/LOCAL_LLM/models/codellama-7b-instruct.Q2_K.gguf   -n 256   -p "Write a complete Python script that gets the top resource usage processes. Include error handling."
 ```
 
 Tweak typical flags for Nano:
